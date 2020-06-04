@@ -45,11 +45,11 @@ axs[1, 0].set_xlabel('X definition %d' % i)
 
 
 axs[1, 1].step(x4, y4,y8, 'tab:red')
-axs[1, 1].text(0.95, 0.05, '1 graph',
+axs[1, 1].text(0.84, 0.2, '1 graph',
         verticalalignment='bottom', horizontalalignment='right',
         transform=ax.transAxes,
-        color='green', fontsize=9)
-axs[1, 1].text(0.65, 0.4, '1 graph',
+        color='blue', fontsize=9)
+axs[1, 1].text(0.65, 0.5, '1 graph',
         verticalalignment='top', horizontalalignment='right',
         transform=ax.transAxes,
         color='red', fontsize=9)
