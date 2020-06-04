@@ -1,0 +1,69 @@
+#импорт библиотек
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.gridspec as gridspec
+
+
+
+#задаем графики
+x1= np.arange(14)
+y1= (x1**2)-3*x1+5
+y5= (x1**2)-3*x1-9
+
+x2= np.arange(20)
+y2= np.sin(x2 ** 2-1)
+y6= np.sin(x2 **3)
+
+x3= np.arange(10)
+y3= -x3**2+19
+y7= x3**2-90
+
+x4= np.arange(5)
+y4=  -x4**2+7  
+y8=  x4**3+7 
+fig, axs = plt.subplots(2,2)
+
+#располагаем графики и делаем подписи
+axs[0, 0].step(x1, y1+1, y5+3,  'tab:red')
+axs[0, 0].text(0, 30, r'Formula 1', fontsize=9)
+axs[0, 0].text(6, 0, r'Formula 1', fontsize=9)
+
+#пробовал разные способы подписей внутри графиков
+axs[0, 1].step(x2, y2, y6,  'tab:orange')
+axs[0, 1].text(10, 0.75, 'HW 1', style='italic',
+        bbox={'facecolor': 'green', 'alpha': 0.1, 'pad': 5})
+axs[0, 1].text(0.2, -0.88, 'HW 2', style='italic',
+        bbox={'facecolor': 'orange', 'alpha': 0.2, 'pad': 5})
+
+
+
+axs[1, 0].step(x3, y3+2,y7+1, 'tab:green')
+axs[1, 0].text(4, 8, r'Formula 1', fontsize=9)
+axs[1, 0].text(5, -70, r'Formula 2', fontsize=9)
+axs[1, 0].set_xlabel('X definition %d' % i)
+
+
+
+axs[1, 1].step(x4, y4,y8, 'tab:red')
+axs[1, 1].text(0.95, 0.05, '1 graph',
+        verticalalignment='bottom', horizontalalignment='right',
+        transform=ax.transAxes,
+        color='green', fontsize=9)
+axs[1, 1].text(0.65, 0.4, '1 graph',
+        verticalalignment='top', horizontalalignment='right',
+        transform=ax.transAxes,
+        color='red', fontsize=9)
+
+
+#подписываем оси
+axs[0, 0].set_xlabel('X definition %d' % i)
+axs[0, 1].set_xlabel('X definition %d' % i)
+
+axs[1, 1].set_xlabel('Another X definition %d' % i)
+axs[0, 0].set_ylabel('Y definition %d' % i)
+axs[1, 0].set_ylabel('Y definition %d' % i)
+
+
+#смотрим итог
+plt.show()
+                
