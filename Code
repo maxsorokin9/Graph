@@ -23,12 +23,12 @@ y4=  -x4**2+7
 y8=  x4**3+7 
 fig, axs = plt.subplots(2,2)
 
-#располагаем графики и делаем подписи
+#располагаем графики и подписи на них
 axs[0, 0].step(x1, y1+1, y5+3,  'tab:red')
 axs[0, 0].text(0, 30, r'Formula 1', fontsize=9)
 axs[0, 0].text(6, 0, r'Formula 1', fontsize=9)
 
-#пробовал разные способы подписей внутри графиков
+
 axs[0, 1].step(x2, y2, y6,  'tab:orange')
 axs[0, 1].text(10, 0.75, 'HW 1', style='italic',
         bbox={'facecolor': 'green', 'alpha': 0.1, 'pad': 5})
@@ -55,7 +55,7 @@ axs[1, 1].text(0.65, 0.5, '1 graph',
         color='red', fontsize=9)
 
 
-#подписываем оси
+#ставим оси
 axs[0, 0].set_xlabel('X definition %d' % i)
 axs[0, 1].set_xlabel('X definition %d' % i)
 
@@ -64,6 +64,5 @@ axs[0, 0].set_ylabel('Y definition %d' % i)
 axs[1, 0].set_ylabel('Y definition %d' % i)
 
 
-#смотрим итог
+
 plt.show()
-                
